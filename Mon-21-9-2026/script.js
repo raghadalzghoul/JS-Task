@@ -374,3 +374,534 @@ function largest(a, b) {
 }
 
 console.log(largest(10, 20));
+
+
+//8
+
+
+function triangleType(a, b, c) {
+
+    if (a === b && b === c) {
+        return "Equilateral";
+    } else if (a === b || a === c || b === c) {
+        return "Isosceles";
+    } else {
+        return "Scalene";
+    }
+
+}
+
+console.log(triangleType(5, 5, 5));
+
+
+//9
+
+function inRange(number, min, max) {
+
+    return number >= min && number <= max;
+
+}
+
+console.log(inRange(15, 10, 20));
+
+
+//10
+function isLeapYear(year) {
+
+    if (year % 400 === 0) {
+        return true;
+    }
+
+    if (year % 100 === 0) {
+        return false;
+    }
+
+    return year % 4 === 0;
+}
+
+console.log(isLeapYear(2024));
+
+
+/////////////////////////loops
+
+for (let i = 1; i <= 50; i++) {
+
+    if (i % 2 === 0) {
+        console.log(i);
+    }
+
+}
+
+
+
+
+
+let i = 1;
+
+while (i <= 50) {
+
+    if (i % 2 === 0) {
+        console.log(i);
+    }
+
+    i++;
+}
+
+
+
+
+//3
+//even
+
+for (let i = 2; i <= 50; i += 2) {
+    console.log(i);
+}
+
+
+
+
+//odd
+
+for (let i = 1; i <= 50; i += 2) {
+    console.log(i);
+}
+
+//4
+
+
+for (let i = 1; i <= 100; i++) {
+
+    if (i % 3 === 0 && i % 5 === 0) {
+        console.log("FizzBuzz");
+    } else if (i % 3 === 0) {
+        console.log("Fizz");
+    } else if (i % 5 === 0) {
+        console.log("Buzz");
+    } else {
+        console.log(i);
+    }
+
+}
+
+
+////5
+
+function fizzBuzz(number) {
+
+    if (number % 3 === 0 && number % 5 === 0) {
+        return "FizzBuzz";
+    } else if (number % 3 === 0) {
+        return "Fizz";
+    } else if (number % 5 === 0) {
+        return "Buzz";
+    } else {
+        return number;
+    }
+
+}
+
+console.log(fizzBuzz(1));
+console.log(fizzBuzz(15));
+
+
+
+//6
+
+function fizzBuzz(number) {
+
+    if (number > 100) {
+        return;
+    }
+
+    if (number % 3 === 0 && number % 5 === 0) {
+        console.log("FizzBuzz");
+    } else if (number % 3 === 0) {
+        console.log("Fizz");
+    } else if (number % 5 === 0) {
+        console.log("Buzz");
+    } else {
+        console.log(number);
+    }
+
+    fizzBuzz(number + 1);
+}
+
+fizzBuzz(1);
+
+//7
+function banknotes(amount, notes) {
+
+    let result = [];
+
+    for (let i = 0; i < notes.length; i++) {
+
+        while (amount >= notes[i]) {
+
+            result.push(notes[i]);
+
+            amount -= notes[i];
+        }
+    }
+
+    return result;
+}
+
+console.log(banknotes(57, [25, 10, 5, 1]));
+
+//8
+
+function countCharacter(str, character) {
+
+    let count = 0;
+
+    str = str.toLowerCase();
+    character = character.toLowerCase();
+
+    for (let i = 0; i < str.length; i++) {
+
+        if (str[i] === character) {
+            count++;
+        }
+
+    }
+
+    return count;
+}
+
+console.log(countCharacter("Coding Academy by Orange", "o"));
+
+
+//9
+//a
+for (let i = 0; i <= 20; i++) {
+    console.log(i);
+}
+//b
+for (let i = 3; i <= 29; i += 2) {
+    console.log(i);
+}
+//c
+for (let i = 12; i >= -14; i -= 2) {
+    console.log(i);
+}
+//d
+for (let i = 50; i >= 20; i--) {
+
+    if (i % 3 === 0) {
+        console.log(i);
+    }
+
+}
+//10
+let text = "CodingAcademy";
+
+let array = [7, 500, "KH404", "black", 36];
+
+//e
+
+for (let i = 0; i < array.length; i++) {
+    console.log(array[i]);
+}
+
+//f
+
+for (let i = text.length - 1; i >= 0; i--) {
+    console.log(text[i]);
+}
+
+//11
+let numbers = [7, 23, 18, 9, -13, 38, -10, 12, 0, 124];
+
+let evens = [];
+let odds = [];
+
+for (let i = 0; i < numbers.length; i++) {
+
+    if (numbers[i] % 2 === 0) {
+        evens.push(numbers[i]);
+    } else {
+        odds.push(numbers[i]);
+    }
+
+}
+
+console.log(evens);
+console.log(odds);
+
+//12
+
+let proteins = [
+    "chicken",
+    "pork",
+    "tofu",
+    "beef",
+    "fish",
+    "beans"
+];
+
+let grains = [
+    "rice",
+    "pasta",
+    "corn",
+    "potato",
+    "quinoa",
+    "crackers"
+];
+
+let vegetables1 = [
+    "peas",
+    "green beans",
+    "kale",
+    "edamame",
+    "broccoli",
+    "asparagus"
+];
+
+let beverages = [
+    "juice",
+    "milk",
+    "water",
+    "soy milk",
+    "soda",
+    "tea"
+];
+
+let desserts = [
+    "apple",
+    "banana",
+    "more kale",
+    "ice cream",
+    "chocolate",
+    "kiwi"
+];
+
+
+function createMeals(numberOfMeals) {
+
+    let meals = [];
+
+    for (let i = 0; i < numberOfMeals; i++) {
+
+        let meal = [
+            proteins[i % proteins.length],
+            grains[i % grains.length],
+            vegetables1[i % vegetables1.length],
+            beverages[i % beverages.length],
+            desserts[i % desserts.length]
+        ];
+
+        meals.push(meal);
+    }
+
+    return meals;
+}
+
+console.log(createMeals(4));
+
+
+
+//Objects
+
+function getProperties(obj) {
+
+    return Object.keys(obj);
+
+}
+
+let student = {
+    name: "Raghad",
+    age: 23,
+    major: "Computer Science"
+};
+
+console.log(getProperties(student));
+
+//2
+function countProperties(obj) {
+
+    return Object.keys(obj).length;
+
+}
+
+console.log(countProperties(student));
+
+
+//3
+
+function combineObjects(obj1, obj2) {
+
+    return Object.assign({}, obj1, obj2);
+
+}
+
+let person = {
+    name: "Raghad"
+};
+
+let information = {
+    age: 23
+};
+
+console.log(combineObjects(person, information));
+
+//4
+
+function uppercaseValues(obj) {
+
+    let result = {};
+
+    for (let key in obj) {
+
+        result[key] = obj[key].toUpperCase();
+
+    }
+
+    return result;
+}
+
+let data = {
+    name: "raghad",
+    city: "amman"
+};
+
+console.log(uppercaseValues(data));
+
+//5
+
+function removeNull(obj) {
+
+    let result = {};
+
+    for (let key in obj) {
+
+        if (obj[key] !== null) {
+            result[key] = obj[key];
+        }
+
+    }
+
+    return result;
+}
+
+let data1 = {
+    name: "Raghad",
+    age: null,
+    city: "Amman"
+};
+
+console.log(removeNull(data1));
+
+//6
+
+
+function sortProperties(obj) {
+
+    return Object.keys(obj).sort();
+
+}
+
+let student1 = {
+    name: "Raghad",
+    age: 23,
+    city: "Amman",
+    major: "Computer Science"
+};
+
+console.log(sortProperties(student1));
+
+
+
+
+/////////////////////second
+
+let age1 = 27;
+
+if (age1 > 18) {
+    console.log("You are an adult");
+}
+
+
+//2
+
+let num = 4;
+
+if (num % 2 === 0) {
+    console.log("The number is even");
+}
+
+
+//3
+let char = "a";
+
+if (
+    (char >= "a" && char <= "z") ||
+    (char >= "A" && char <= "Z")
+) {
+    console.log("It's a letter");
+}
+//4
+
+
+let list = [1, 2, 3];
+
+if (Array.isArray(list)) {
+    console.log("It's an array");
+}
+
+
+//5
+let x1 = 5;
+
+if (x1 > 0) {
+    console.log("x is a positive number");
+}
+
+
+//9
+
+let z1 = 9;
+
+if (z1 % 3 === 0) {
+    console.log("z is a multiple of 3");
+}
+
+
+//10
+
+
+let password = "mypassword123";
+
+if (password.length >= 8) {
+    console.log("Your password is strong");
+}
+//11
+let age2 = 30;
+
+if (age2 >= 18 && age2 <= 65) {
+    console.log("You are of working age");
+}
+//12
+
+let color = "red";
+
+if (color === "red" || color === "green" || color === "blue") {
+    console.log("color is a primary color");
+}
+
+//13
+
+function isValidNumber(value) {
+
+    if (!isNaN(value)) {
+        console.log(value + " is a valid number");
+    } else {
+        console.log(value + " is not a number");
+    }
+
+}
+
+isValidNumber(11);
+isValidNumber("19");
+isValidNumber("xyz");
+isValidNumber("17.5");
+isValidNumber("21F");
